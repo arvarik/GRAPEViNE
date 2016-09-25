@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.oose2015.grapevine.Activities.ViewFeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <TextView
+            android:id="@+id/feed_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/display_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/radius_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/radius_label"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tags_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/tags"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tags"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="4"
+            android:minLines="4"
+            android:scrollbars="vertical"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/start_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/start_time_label"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/textColorPrimary"
+            android:paddingLeft="10dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/end_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/end_time_label"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/textColorPrimary"
+            android:paddingLeft="10dp"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</ScrollView>

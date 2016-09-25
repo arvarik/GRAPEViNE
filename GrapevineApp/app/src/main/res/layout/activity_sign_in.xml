@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.oose2015.grapevine.Activities.SignInActivity"
+>
+
+    <ImageView
+        android:paddingTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="85dp"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="25dp"
+        android:id="@+id/username_edit_text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="85dp"
+        android:hint="@string/password"
+        android:inputType="text"
+        android:password="true"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="25dp"
+        android:id="@+id/password_edit_text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="98dp"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:id="@+id/sign_in_button"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick" />
+
+
+</LinearLayout>

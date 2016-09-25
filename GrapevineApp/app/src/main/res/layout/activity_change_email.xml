@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oose2015.grapevine.Activities.ChangePasswordActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:minHeight="?attr/actionBarSize" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_new_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:hint="@string/new_email"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:id="@+id/email_edit_text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_new_email_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:hint="@string/confirm_email"
+        android:inputType="text"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="25dp"
+        android:id="@+id/confirm_email_edit_text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:text="@string/change_email"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:id="@+id/change_email_button"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick" />
+
+</LinearLayout>

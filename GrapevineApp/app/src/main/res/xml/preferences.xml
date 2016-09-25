@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <PreferenceScreen
+        android:title="Change Password">
+        <intent android:action="com.oose2015.grapevine.ChangePasswordActivity"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Change Email">
+        <intent android:action="com.oose2015.grapevine.ChangeEmailActivity"/>
+    </PreferenceScreen>
+
+</PreferenceScreen>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oose2015.grapevine.Activities.CreateEventActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:minHeight="?attr/actionBarSize" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_bar">
+        <EditText
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_title"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="24dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_display_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_event_title">
+        <EditText
+            android:id="@+id/display_location"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/display_location"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="24dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/maps_button_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_display_location"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            android:text="@string/exact_location"/>
+
+        <Button
+            android:layout_marginTop="2dp"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/maps_button_label"
+            android:layout_height="wrap_content"
+            android:text="@string/google_maps"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:id="@+id/google_maps_button"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickGoogleMaps" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/start_date_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/google_maps_button"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            android:text="@string/start_date"/>
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_date_picker"
+            android:layout_below="@+id/start_date_label"
+            android:layout_marginTop="2dp">
+        </DatePicker>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/start_time_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_date_picker"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            android:text="@string/start_time"/>
+
+        <TimePicker
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_picker_start"
+            android:layout_below="@id/start_time_label"
+            android:layout_marginRight="282dp">
+        </TimePicker>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/end_date_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_picker_start"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            android:text="@string/end_date"/>
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/end_date_picker"
+            android:layout_below="@+id/end_date_label"
+            android:layout_marginTop="2dp">
+        </DatePicker>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/end_time_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_date_picker"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18dp"
+            android:text="@string/end_time"/>
+
+        <TimePicker
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_picker_end"
+            android:layout_below="@id/end_time_label"
+            android:layout_marginRight="282dp">
+        </TimePicker>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discoverable"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="24dp"
+            android:layout_below="@id/time_picker_end"/>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/checkbox"
+            android:layout_height="80dp"
+            android:text="@string/Next"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:id="@+id/next_button"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick" />
+    </RelativeLayout>
+</ScrollView>

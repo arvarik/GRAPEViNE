@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.oose2015.grapevine.Activities.MainScreen">
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:minHeight="?attr/actionBarSize" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_height="56dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/app_bar"
+            android:src="@drawable/logo"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            android:background="@color/colorPrimary"
+            app:tabTextAppearance="@style/TextAppearance.Design.Tab"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/textColorPrimary"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tab_layout" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/create_event_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/plus_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:borderWidth="2dp"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/main_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:itemTextColor="@color/textColorSecondary"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/drawer_header"/>
+
+</android.support.v4.widget.DrawerLayout>

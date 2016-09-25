@@ -1,0 +1,15 @@
+Iteration 1/GUI PP.pptx
+GrapevineApp/.gradle/
+GrapevineApp/.idea/
+GrapevineApp/local.properties
+GrapevineApp/app/app.iml
+GVBackend/.idea
+GVBackend/model/__pycache__/
+GVBackend/GVBackend/__pycache__/
+GVBackend/model/migrations/__pycache__/
+GVBackend/tests/__pycache__/
+GVBackend/db.sqlite3
+GrapevineApp/build/
+GVBackend/model/views/__pycache__/
+
+*.DS_Store
